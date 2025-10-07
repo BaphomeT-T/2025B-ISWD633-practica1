@@ -6,10 +6,14 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+Muestra los nombres de los archivos o directorios del directorio actual.
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+Muestra los archivos o directorios del directorio actual con más detalles.
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
 # COMPLETAR
+docker exec srv ls -l
 # COLOCAR UNA CAPTURA DE PANTALLA
+<img width="609" height="479" alt="image" src="https://github.com/user-attachments/assets/3af2fa57-f6fc-49e3-9483-7d4ffce67a93" />
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
 El comando **docker exec** te permite acceder a la sesión shell de un contenedor en ejecución, estarás dentro del contenedor y podrás ejecutar comandos como si estuvieras en una terminal normal. 
@@ -44,6 +48,7 @@ Ejecutar
 whoami
 ```
 # COLOCAR UNA CAPTURA DE PANTALLA
+<img width="512" height="134" alt="image" src="https://github.com/user-attachments/assets/5208c768-a5c0-40d2-a08d-0a241d545b4b" />
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando ls.
@@ -64,8 +69,10 @@ docker exec -it <nombre contenedor> <programa o comando>
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
 
 # COMPLETAR
+docker exec -it srv cat /var/jenkins_home/secrets/initialAdminPassword
 
 ### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
+<img width="3770" height="2088" alt="image" src="https://github.com/user-attachments/assets/88137522-df1c-4d59-a069-d92bb03e82a3" />
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
 
